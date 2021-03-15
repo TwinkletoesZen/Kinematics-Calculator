@@ -1,3 +1,4 @@
+import math
 # print("Welcome to Free Fall Calculator")
 
 # Free_Fall_A = -9.81
@@ -9,6 +10,8 @@
 # User_Entered_Time = input(": ")
 
 # print( float(User_Entered_V0) + Free_Fall_A * float(User_Entered_Time))
+
+
 
 class Physic:
 
@@ -74,6 +77,59 @@ class Physic:
       print("Try again later")
 
 
+  def TheDisplacementCurve():
+    print("Hi, d=V0t+1/2at^2")
+    print("What Would you like to find?")
+    User_Desire_Var = input(": ").upper()
+
+    if User_Desire_Var == "D":
+      User_Entered_V0 = input("V0: ")
+    
+      User_Entered_Time = input("Time: ")
+
+      User_Entered_Accleration = input("A: ") 
+
+      print( (float(User_Entered_V0)*float(User_Entered_Time)) + (1/2 * float(User_Entered_Accleration) * float(User_Entered_Time)**2))
+
+    elif User_Desire_Var == "V0":
+      User_Entered_D = input("D: ") 
+
+      User_Entered_Time = input("T: ")
+
+      User_Entered_Accleration = input("A: ")
+
+      print("Coming Soon")
+      # print( float(User_Entered_D)/float(User_Entered_Time) - (1/2*float(User_Entered_Accleration)    
+
+    elif User_Desire_Var == "A":
+      User_Entered_D = input("D: ")
+    
+      User_Entered_V0 = input("V0: ")
+
+      User_Entered_Time = input("A: ")
+
+      print("Coming Soon")
+      # print("")
+
+    elif User_Desire_Var == "T":
+      User_Entered_D = input("D: ")
+
+      User_Entered_V0 = input("V0: ")
+
+      User_Entered_Accleration = input("A: ")
+
+      print("Coming Soon")
+      # print("")
+
+    elif User_Desire_Var == "BACK":
+      return
+
+    else:
+      print("Wrong Command")
+      
+
+      
+
 print("Welcome to a Physcis Calculator built by Twinkletoes")
 
 while True:
@@ -82,8 +138,9 @@ while True:
   if Command == "1":
     Physic.TheDefinitionofVelocity()
   elif Command == "2": 
-    print("Coming Soon")
+    Physic.TheDisplacementCurve()
   elif Command == "EXIT":
     quit()
   else:
     print("Try Again, invaild command")
+
