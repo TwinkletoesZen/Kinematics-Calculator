@@ -1,19 +1,25 @@
 import math
-# print("Welcome to Free Fall Calculator")
 
-# Free_Fall_A = -9.81
+class Kinemetics:
+  
+  def QuantityFinder():
+    Initial_Velocity = False
+    Final_Velocity = False
+    Acceleration = False
+    Displacement = False
+    Time = False
+    
+    print("Please Enter the Quantity Given in the questions, (V0, Vf, a, d, t)")
+    Quantity_Given = input(": ").upper()
+    
+    Initial_Velocity = "V0" in Quantity_Given
+    Final_Velocity = "VF" in Quantity_Given
+    Acceleration = "A" in Quantity_Given
+    Displacement = "D" in Quantity_Given
+    Time = "T" in Quantity_Given
+    
+    
 
-# print("Enter V0")
-# User_Entered_V0 = input(": ")
-
-# print("Enter Time")
-# User_Entered_Time = input(": ")
-
-# print( float(User_Entered_V0) + Free_Fall_A * float(User_Entered_Time))
-
-
-
-class Physic:
 
   def TheDefinitionofVelocity():
     print("Hi, Vf=V0+at")
@@ -128,19 +134,21 @@ class Physic:
       print("Wrong Command")
       
 
-      
+
 
 print("Welcome to a Physcis Calculator built by Twinkletoes")
 
-while True:
-  print("(1) Vf=V0+at), (2) d=V0t+1/2at^2")
-  Command = input(": ").upper()
-  if Command == "1":
-    Physic.TheDefinitionofVelocity()
-  elif Command == "2": 
-    Physic.TheDisplacementCurve()
-  elif Command == "EXIT":
-    quit()
-  else:
-    print("Try Again, invaild command")
+
+
+# while True:
+#   print("(1) Vf=V0+at), (2) d=V0t+1/2at^2")
+#   Command = input(": ").upper()
+#   if Command == "1":
+#     Kinemetics.TheDefinitionofVelocity()
+#   elif Command == "2": 
+#     Kinemetics.TheDisplacementCurve()
+#   elif Command == "EXIT":
+#     quit()
+#   else:
+#     print("Try Again, invaild command")
 
