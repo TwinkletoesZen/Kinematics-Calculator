@@ -1,28 +1,41 @@
 import math
-
 class Kinemetics:
   
   def QuantityFinder():
-    Initial_Velocity = False
-    Final_Velocity = False
-    Acceleration = False
-    Displacement = False
-    Time = False
+    Initial_Velocity = True
+    Final_Velocity = True
+    Acceleration = True
+    Displacement = True
+    Time = True
     
-    print("Please Enter the Quantity Given in the questions, (V0, Vf, a, d, t)")
+    print("Please Enter the Irrelveant Quantity in the questions, (V0, Vf, a, d, t)")
     Quantity_Given = input(": ").upper()
     
-    Initial_Velocity = "V0" in Quantity_Given
-    Final_Velocity = "VF" in Quantity_Given
-    Acceleration = "A" in Quantity_Given
-    Displacement = "D" in Quantity_Given
-    Time = "T" in Quantity_Given
+
+    Initial_Velocity = "V0" not in Quantity_Given
+    Final_Velocity = "VF" not in Quantity_Given
+    Acceleration = "A" not in Quantity_Given
+    Displacement = "D" not in Quantity_Given
+    Time = "T" not in Quantity_Given
     
-    
+    print(Initial_Velocity, Final_Velocity, Acceleration, Displacement, Time)
+
+    if Time == False:
+      print("Using Equation Vf^2=V0^2+2ad")
+      
+      list_of_Quantity_Needed = []
+      n = int(input("Enter the Quantity in the Given Order (V0, Vf, a, d, t): "))
+      
+      for x in range(0, n):
+        numbers= int(input())
+        list_of_Quantity_Needed.append(numbers)
+      
+      print(list_of_Quantity_Needed)
 
 
-  def TheDefinitionofVelocity():
-    print("Hi, Vf=V0+at")
+
+  def TheDefinitionofAccleration():
+    print("Vf=V0+at")
   
     print("What Would you like to find?, Vf, V0, A or T")
     User_Desire_Var = input(": ").upper()
@@ -137,6 +150,7 @@ class Kinemetics:
 
 
 print("Welcome to a Physcis Calculator built by Twinkletoes")
+Kinemetics.QuantityFinder()
 
 
 
